@@ -19,6 +19,33 @@
             color: white;
             text-align: left
         }
+
+        h1 {
+            margin-right: 20px; /* Space between the header text and the prism */
+        }
+
+        /* Create a triangular prism shape */
+        .prism {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid #ff5722; /* Orange color for the prism */
+            position: relative;
+        }
+
+        /* 3D effect for the triangular prism */
+        .prism::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: -50px;
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid rgba(255, 87, 34, 0.7); /* Lighter shade for the 3D effect */
+        }
         nav a {
             margin: 0 15px;
             color: white;
